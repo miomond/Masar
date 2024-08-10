@@ -41,7 +41,7 @@ function CourseContent() {
           />
         </div>
         <div>
-          <div className="d-flex flex-column w-100 my-2  mx-auto gap-2 mb-3">
+          <div className="d-flex flex-column w-75 my-2  mx-auto gap-2 mb-3">
             <button className="btn btn-outline-dark btn-hover">
               Add To Cart
             </button>
@@ -51,7 +51,7 @@ function CourseContent() {
         </div>
       </div>
       <div className="border-bottom border-2 w-75 ">
-        <h4>About This Course</h4>
+        <h4 className="mb-4">About This Course</h4>
         <p className="m-0">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
@@ -71,10 +71,7 @@ function CourseContent() {
             laudantium, totam rem aperiam.
           </p>
         )}
-        <button
-          onClick={toggleExpand}
-          className="btn btn-link-secondary border-0 text-btn"
-        >
+        <button onClick={toggleExpand} className="btn shadow-none">
           {isExpanded ? "Show Less" : "Show More"}
           <span>
             {isExpanded ? (
@@ -86,7 +83,7 @@ function CourseContent() {
         </button>
       </div>
       <div className="border-bottom border-2  w-75">
-        <h4>What You Will Achieve</h4>
+        <h4 className="mb-4">What You Will Achieve</h4>
         <div className="row">
           {Learn.map((item, index) => (
             <div
@@ -101,7 +98,7 @@ function CourseContent() {
       </div>
 
       <div className="border-bottom border-2">
-        <h4>Requirement</h4>
+        <h4 className="mb-4">Requirement</h4>
         <ul className="d-flex flex-column gap-2">
           {Requirements.map((item, index) => (
             <li key={index}>{item}</li>
@@ -109,7 +106,7 @@ function CourseContent() {
         </ul>
       </div>
       <div className="d-flex flex-column gap-2">
-        <h4>course content</h4>
+        <h4 className="mb-4">course content</h4>
 
         <div className="accordion " id="accordionExample">
           <div className="accordion-item">

@@ -7,7 +7,7 @@ import "./BuyCard.css"; // Assuming you have a separate CSS file for custom styl
 
 function BuyCard() {
   return (
-    <div className="card border-1 w-100 border-dark  shadow-sm h-100 d-lg-flex flex-column gap-2 p-3 d-none">
+    <div className="card border-1 w-100 border-dark  shadow-sm h-100 d-lg-flex flex-column gap-2 p-3 mt-4 d-none">
       <div className="image-container mb-3">
         <img
           src="/images/image 168.svg"
@@ -47,7 +47,7 @@ function BuyCard() {
         </p>
         <p className="m-0 text-success">50% off</p>
       </div>
-      <div className="d-flex flex-column gap-2 mb-3">
+      <div className="d-flex flex-column gap-2 mb-3 ">
         <button className="btn btn-outline-dark btn-hover">Add To Cart</button>
         <button className="btn btn-outline-dark btn-hover">Buy Now</button>
       </div>
