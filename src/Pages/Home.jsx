@@ -1,3 +1,4 @@
+import React, { useRef, useState } from 'react'
 import Footer from '../common/Footer'
 import style from '../Styles/landing.module.css'
 import Quran from '../assets/Quran.png'
@@ -7,56 +8,109 @@ import img3 from '../assets/Screenshot3.png'
 import img4 from '../assets/Screenshot4.png'
 import img5 from '../assets/Screenshot5.png'
 import img9 from '../assets/screen4.jpg'
-import img10 from '../assets/image.png'
-import img11 from '../assets/image86.png'
-import img12 from '../assets/image9.png'
+import img10 from '../assets/cuteChild.jpg'
+import img11 from '../assets/GroupLearning.jpg'
+import img12 from '../assets/BriliantWoman.jpg'
 import img13 from '../assets/person1.avif'
 import img14 from '../assets/person2.avif'
+import img15 from '../assets/GraduatedStudent.jpg'
 import vid from '../assets/vid.mp4'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faStar} from '@fortawesome/free-solid-svg-icons'
-
+import Styles from '../Styles/NewNav.module.css'
 import Recommended from '../components/Recommended/Recommended'
+import { NavB } from '../common/NavB'
+import { motion, useScroll } from "framer-motion";
+import HeroMahdy from '../components/HeroMahdy'
+import HeroCards from '../components/HeroCards'
+
 
 function Home() {
+     const scrollRef = useRef(null)
+     const {scrollYProgress} = useScroll()
+
+
   return (
     <>
        <>
-      <div className={style.hero}>
-        <div className={style.hero_content}>
-          <h1>Welcome to our Masar Learning <br>
-          </br> Website!</h1>
-          <p>Master the memorization and recitation of the Quran in both Arabic and English.</p>
-          <button>Get Started</button>
-        </div>
-        <div className={style.hero_img}>
-          {/* <p> fg;lm;dfl</p> */}
-          <img src={Quran} alt="" />
-        </div>
+       <NavB></NavB>
+       <div  className=" text-center  bg-image  position-relative w-100"style={{ height: 750}}>
+
+<video  className={`w-100 h-100  `} autoPlay loop  muted>
+  <source src={vid} type="video/mp4" />
+</video>
+  <div className="mask" style={{ backgroundColor: "rgba(0, 0, 0, 0.6)" }}>
+    <div className="d-flex justify-content-center align-items-center h-100">
+      <div className="text-white">
+        <h1 className="mb-3">Heading</h1>
+        <h4 className="mb-3">Subheading</h4>
+        <a
+          data-mdb-ripple-init=""
+          className="btn btn-primary "
+          href="#!"
+          role="button"
+        >
+          Call to action
+        </a>
       </div>
+    </div>
+  </div>
+</div>
+        {/* <div className={style.hero}>
+          <div className={style.hero_content}>
+            <h1>Welcome to our Masar Learning <br>
+            </br> Website!</h1>
+            <p>Master the memorization and recitation of the Quran in both Arabic and English.</p>
+            <button>Get Started</button>
+          </div>
+          <div className={style.hero_img}>
+            <img src={Quran} alt="" />
+          </div>
+        </div> */}
+<HeroMahdy></HeroMahdy>
+<div className={`container `}>
+<div className={`text-center m-5`}>
+  <h3 className='m-5'>Recent Courses</h3>
+  <p className={`m-5 p-5`}>Maecenas sit amet tristique turpis. Quisque porttitor eros quis leo pulvinar, at hendrerit sapien iaculis. Donec consectetur accumsan arcu, sit amet fringilla ex ultricies.
+</p>
+</div>
+<HeroCards></HeroCards>
+</div>
+{/* 
+<div className='mt-5 container Her' ref={scrollRef} style={{  }}>
+
+<motion.div
+ initial={{ opacity: 0 }}
+ whileInView={{ opacity: 1 }}
+ viewport={{ root: scrollRef }}>
+
+<h1 className='mt-5 '>hi</h1>
+<img src={Quran} width={"700px"} alt="" />
+
+</motion.div>
+</div>    */}
+
+
 
 
       <div className={style.sec2}>
 
         <div className={style.sec2_imgs}>
-          <img src={img1} alt="" />
-          <img src={img2} alt="" />
-          <img src={img3} alt="" />
-          <img src={img4} alt="" />
-          <img src={img5} alt="" />
-          <img src={img9} alt="" />
+          <img src={img1} className={`rounded-5 `} alt="" />
+          <img src={img2} className={`rounded-5 `} alt="" />
+          <img src={img3} className={`rounded-5 `} alt="" />
+          <img src={img4} className={`rounded-5 `} alt="" />
+          <img src={img5} className={`rounded-5 `} alt="" />
+          <img src={img9} className={`rounded-5 `} alt="" />
         </div>
-
         <div className={style.sec2_content}>
           <h2>Our religious lessons are relevant to the school <br></br> curriculum </h2>
           <p>Dive into our informative articles on Quranic studies and Arabic teachings.</p>
           <button>Start Learning</button>
         </div>
-
       </div>
-
       <div className={style.sec3}>
-        <img src={img10} alt="" />
+        <img src={img10} className={`rounded-4`} alt="" />
         <div className={style.sec3_content}>
           <h2>Learn religious lessons and everything related to the <br></br>Islamic religion </h2>
           <p>Read what our students have to say about their Quran learning experience.</p>
@@ -68,7 +122,7 @@ function Home() {
         <p>Explore our premium courses for Quran memorization and Arabic learning.</p>
 
       </div>
-      < Recommended />
+      {/* < Recommended /> */}
       <div className={style.sec5}>
         <div className={style.sec5_top}>
           <div className={style.sec5_top_left}>
@@ -77,12 +131,12 @@ function Home() {
             <button>Start Learning</button>
           </div>
           <div className={style.sec5_top_right}>
-            <img src={img11} alt="" />
+            <img src={img11} className={`rounded-4`} alt="" />
           </div>
         </div>
         <div className={style.sec5_bottom}>
           <div className={style.sec5_bottom_left}>
-            <img src={img11} alt="" />
+            <img src={img12} className={`rounded-4`} alt="" />
           </div>
           <div className={style.sec5_bottom_right}>
             <h2>Reports and analytics on <br />student’s performance</h2>
@@ -101,7 +155,7 @@ function Home() {
             <div className={style.reviews}>
               <div className={style.reviews_top}>
                 <div className={style.reviews_top_name}>
-                  <img src={img13} alt="" width={50} />
+                  <img src={img13}  alt="" width={50} />
                   <p> Ahmed</p>
                 </div>
                 <div className={style.reviews_top_rate}>
@@ -137,7 +191,7 @@ function Home() {
           </div>
         </div>
         <div className={style.sec6_left}>
-          <img src={img12} alt="" />
+          <img src={img15}className={`rounded-4`} alt="" />
         </div>
       </div>
       <div className={style.sec7}>
@@ -153,7 +207,7 @@ function Home() {
         <button>Let's Go</button>
         </div>
       </div>
-      <div className={style.sec_contact}>
+      {/* <div className={style.sec_contact}>
          <div className={style.sec_contact_head}>
                 <h2>Contact Us</h2>
                 <p>Reach out to us for inquiries and registration </p>
@@ -179,9 +233,9 @@ function Home() {
                <input type="submit" className={style.submit} />
                </form>
          </div>
-      </div>
-      <Footer/>
+      </div> */}
     </>
+    <Footer/>
     
     </>
   )

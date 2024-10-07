@@ -1,0 +1,20 @@
+.events-section {
+  background-color: #dbeeff;
+}
+
+.breadcrumb-item a {
+  color: #6c757d;
+}
+
+.breadcrumb-item.active {
+  color: #6c757d;
+}
+
+.display-4 {
+  font-size: 2.5rem;
+}
+
+.lead {
+  font-size: 1.25rem;
+  color: #6c757d;
+}

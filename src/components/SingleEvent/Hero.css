@@ -1,0 +1,27 @@
+.hero-container {
+  background: linear-gradient(
+    to right,
+    #000000 0%,
+    #231092 25%,
+    #4b0082 50%,
+    #000000 75%,
+    #231092 100%
+  );
+  color: white;
+}
+
+
+
+.breadcrumb {
+  font-size: 0.9rem;
+}
+
+.btn-primary {
+  background-color: #6a0dad;
+  border-color: #6a0dad;
+}
+
+.btn-primary:hover {
+  background-color: #5a008f;
+  border-color: #5a008f;
+}

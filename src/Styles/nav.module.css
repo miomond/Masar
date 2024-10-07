@@ -4,10 +4,105 @@
     z-index: 100;
     top: 0;
     left: 0;
-    background-color:#FFFFFF;
+/* From https://css.glass */
+background: rgba(182, 181, 181, 0.64);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5.8px);
+-webkit-backdrop-filter: blur(5.8px);}
+
+.Her{
+  background: rgba(182, 181, 181, 0.64);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5.8px);
+-webkit-backdrop-filter: blur(5.8px);
+
+height: 80vh;
+
 }
-.navbar{
-    /* position: fixed; */
+.fixedtop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030
+}
+
+.freyalogo {
+  /* background: var(--freya-1100); */
+  border-radius: 1.375rem;
+  border-bottom-right-radius: 0;
+  line-height: 1;
+  /* color: var(--freya-white); */
+  font-size: 1rem;
+  text-transform: uppercase;
+  padding: 7px 10px 7px 13px;
+}
+
+.navbarfreya {
+  background: var(--freya-bg-navbar-glass);
+  margin: 1.25rem auto;
+  color: #161820;
+  -webkit-box-shadow: 0 1px 3px rgba(0,0,0,.15);
+  box-shadow: 0 1px 3px rgba(0,0,0,.15);
+  letter-spacing: .01rem;
+  border-radius: 1.375rem!important;
+}
+
+.navbarfreya .dropdown-menu {
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  padding-left: 1.2rem;
+ 
+}
+
+@media(min-width: 992px) {
+  .navbarfreya .dropdown-menu {
+      padding-left:0;
+      -webkit-box-shadow: var(--freya-box-shadow-sm) !important;
+      box-shadow: var(--freya-box-shadow-sm) !important
+  }
+}
+
+.hamburger {
+  padding: .5rem;
+  transform: translateY(-5px)
+}
+
+.hamburger .hamburger-box {
+  height: 0;
+  width: 1.875rem
+}
+
+.hamburger .hamburger-box .hamburger-inner,.hamburger .hamburger-box .hamburger-inner::after,.hamburger .hamburger-box .hamburger-inner::before {
+  width: 100%;
+  height: .063rem;
+  border-radius: .188rem;
+  background-color: currentColor
+}
+
+.hamburger.is-active .hamburger-inner {
+  background-color: transparent
+}
+
+.hamburger-inner::before {
+  top: -7px
+}
+
+.hamburger--emphatic .hamburger-inner::after {
+  top: 7px
+}
+
+.navbar-toggler:focus {
+  -webkit-box-shadow: none;
+  box-shadow: none
+}
+
+
+
+/* .navbar{
+    position: fixed;
     width: 90%;
     margin: auto;
     height: 10vh;
@@ -15,24 +110,30 @@
     justify-content: space-between;
     align-items: center;
    
-    /* padding: 30px 10%; */
-    /* position: relative; */
-}
+    padding: 30px 10%;
+    position: relative;
+} */
 .logo{
     text-decoration: none;
     cursor: pointer;
     position: relative;
     left: 50px;
     margin-left: -40px;
+    background: #f9f6f60f;
+}
+.logo::hover{
+ 
+  background: #ffffff!important;
 }
 .btn1{
 background-color: var(--dark-yellow-color);
 color:#074040;
 border: none;
 padding: 10px 40px;
-border-radius: 25px;
-font-size: 20px;
-font-weight: 400;
+margin: 5px 0px;
+border-radius: 10px;
+font-size: 15px;
+font-weight: 500;
 cursor: pointer;
 }
 .btn2{
@@ -40,10 +141,11 @@ cursor: pointer;
     color: #074040;
     border: none;
     padding: 10px 10px;
-    border-radius: 50px;
-    font-size: 20px;
-    font-weight: 400;
+    border-radius: 10px;
+    font-size: 15px;
+font-weight: 500;
     cursor: pointer;
+    margin: 5px 0px;
     }
 .dec{
     text-decoration: none;
@@ -95,6 +197,7 @@ cursor: pointer;
 .FontAwesomeIconSearch{
     /* z-index: 100; */
     position: relative;
+    top: 0;
     left: -30px;
     color:  rgba(128, 128, 128, 0.664);
 }

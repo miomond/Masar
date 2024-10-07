@@ -1,0 +1,7 @@
+.event-card .card-body {
+  padding: 15px;
+}
+
+.event-card .position-absolute {
+  border-radius: 0.5rem;
+}

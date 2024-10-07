@@ -16,7 +16,7 @@ function CourseCard({ name, instructor, rating, price, imageUrl, lessons }) {
         <img
           src={imageUrl}
           alt={name}
-          className="card-img-top fixed-height-image"
+          className="card-img-top fixed-height-image "
         />
       </div>
       <div className="card-body d-flex flex-column">
