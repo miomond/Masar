@@ -1,0 +1,14 @@
+.text-content {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+h1,
+h2 {
+  font-family: "Arial", sans-serif;
+  font-weight: bold;
+  color: #ff0080;
+}
+
+img {
+  border-radius: 15px;
+}

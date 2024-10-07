@@ -12,8 +12,6 @@ import TeacherLogin from "./Pages/TeacherLogin";
 import TeacherRegister from "./Pages/TeacherRegister";
 import CourseDetails from "./Pages/StudentLauout/CourseDetails";
 import LessonDetails from "./Pages/StudentLauout/LessonDetails";
-import Events from "./Pages/Events";
-import SingleEvent from "./Pages/SingleEvent";
 
 import TProfile from "./Pages/TeacherLayout/TProfile";
 import TeacherLay from "./Pages/TeacherLayout/TeacherLay";
@@ -23,6 +21,8 @@ import { AuthProvider, useAuth } from "./context/auth";
 import { RequireAuth } from "./context/RequireAuth";
 import Homy from "./Pages/Homy";
 import { useScroll } from "framer-motion";
+import SingleEvent from "./Pages/SingleEvent";
+import EventsPage from "./Pages/Events";
 
 function App() {
   let auth = useAuth();
@@ -35,7 +35,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="Homy" element={<Homy />} />
           <Route path="about" element={<About />} />
-          <Route path="events" element={<Events />} />
+          <Route path="events" element={<EventsPage />} />
           <Route path="eventsingle" element={<SingleEvent />} />
 
           <Route path="Subscribtion" element={<Subscribtion />} />

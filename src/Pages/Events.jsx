@@ -3,7 +3,7 @@ import EventsMainSection from "../components/Events/EventMainsection";
 import Pagiation from "../components/Events/Pagiation";
 import SearchSection from "../components/Events/SearchSection";
 
-function Events() {
+function EventsPage() {
   return (
     <div>
       <EventsMainSection />
@@ -23,4 +23,4 @@ function Events() {
   );
 }
 
-export default Events;
+export default EventsPage;
