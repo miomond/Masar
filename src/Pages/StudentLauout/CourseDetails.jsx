@@ -1,4 +1,3 @@
-
 import BuyCard from "../../components/CourseDetails/BuyCard";
 import CourseContent from "../../components/CourseDetails/CourseContent";
 import MainSection from "../../components/CourseDetails/MainSection";
@@ -11,7 +10,7 @@ function CourseDetails() {
 
       <div className="container my-4">
         <CourseContent />
-        <div className="buy-card-container position-absolute top-0 end-0 w-25">
+        <div className="buy-card-container  position-absolute top-0 end-0 w-25">
           <BuyCard />
         </div>
       </div>
